@@ -5,9 +5,10 @@ mkdir $TARGET_DIR
 
 echo "Downloading blacklist into $TARGET_DIR"
 # Update lists directly from repos
-curl -o $TARGET_DIR/adservers.txt https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt || exit 1
-#curl -o $TARGET_DIR/facebook-extended.txt https://www.github.developerdan.com/hosts/lists/facebook-extended.txt || exit 1
-curl -o $TARGET_DIR/coinminers-all.txt https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list.txt?inline=false || exit 1
+curl -o $TARGET_DIR/adios-adblocker.txt https://raw.githubusercontent.com/AlexRabbit/ADios-ADS/master/hosts || exit 1
+#curl -o $TARGET_DIR/anudeepnd-adservers.txt https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt || exit 1
+#curl -o $TARGET_DIR/developerdan-facebook-extended.txt https://www.github.developerdan.com/hosts/lists/facebook-extended.txt || exit 1
+curl -o $TARGET_DIR/coinblockerlists-coinminers-all.txt https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list.txt?inline=false || exit 1
 
 # Merge
 echo "Creating new host file"
